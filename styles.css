@@ -1,0 +1,223 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+  position: relative;
+  background: #ecf2f8;
+}
+
+main {
+  width: 327px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
+  position: relative;
+}
+section {
+  padding: 36px 32px 20px 32px;
+}
+h1 {
+  color: #48556a;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.2px;
+  margin-bottom: 12px;
+}
+p {
+  color: #6e8098;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.122px;
+  margin-bottom: 32px;
+}
+h2 {
+  color: #48556a;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.122px;
+}
+.bg-image {
+  height: 200px;
+  background-image: url("images/drawers.jpg"); /* Replace with your image path */
+  background-size: cover; /* Ensure the image covers the entire header */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  border-radius: 10px 10px 0 0;
+}
+.avatar-img {
+  border-radius: 40px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.user-info {
+  display: flex;
+  gap: 16px;
+}
+.share-img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: #ecf2f8;
+  border-radius: 32px;
+  align-self: center;
+  margin-left: auto;
+}
+.share-btn {
+  border: none;  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: #ecf2f8;
+  border-radius: 32px;
+  align-self: center;
+  margin-left: auto;
+}
+span {
+  color: #9daec2;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.122px;
+}
+.share-view {
+  border-radius: 0px 0px 10px 10px;
+  background: #48556a;
+  width: 327px;
+  height: 64px;
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  gap: 21px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 32px;
+  padding-right: 32px;
+  visibility: hidden;
+}
+.share-view span {
+  color: #9daec2;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 5px;
+}
+.desktop-share-bubble {
+  position: absolute;
+  visibility: hidden;
+}
+.social-icons {
+  width: 92px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.share-share-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+@media (min-width: 1025px) {
+  main {
+    width: 730px;
+    display: flex;
+  }
+
+  .bg-image {
+    width: 286px;
+    height: 280px;
+    border-radius: 10px 0 0 10px;
+  }
+  section {
+    width: 448px;
+    padding: 32px 42px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .desktop-share-bubble {
+    position: absolute;
+    bottom: 97px;
+    right: -64px;
+    width: 248px;
+    height: auto;
+    background-color: #48556a; /* Bubble color */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: drop-shadow(0px 10px 10px rgba(201, 213, 225, 0.5));
+    visibility: hidden;
+    padding: 18px 24px;
+  }
+
+  .desktop-share-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #48556a; /* Same color as the bubble */
+  }
+
+  .bubble-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .bubble-content span {
+    color: #9daec2;
+    font-family: Manrope;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 153.846% */
+    letter-spacing: 5px;
+  }
+  .bubble-conten .icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .bubble-conten .icons img {
+    width: 92px;
+    height: 20px;
+    cursor: pointer;
+  }  
+}
